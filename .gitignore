@@ -1,4 +1,5 @@
 # Project exclude paths
 /target/
-.idea/
-JavaFoundationNovember.iml
+/.idea/
+/JavaFoundationNovember.iml
+/com.einar.iml

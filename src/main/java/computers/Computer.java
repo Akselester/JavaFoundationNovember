@@ -1,8 +1,15 @@
 package computers;
 
 public abstract class Computer {
+    private String name;
     private double price;
     private int screenSize;
+
+    public Computer(String name, double price, int screenSize) {
+        this.name = name;
+        this.price = price;
+        this.screenSize = screenSize;
+    }
 
     public abstract String isItCool();
 
@@ -20,5 +27,9 @@ public abstract class Computer {
 
     public void setScreenSize(int screenSize) {
         this.screenSize = screenSize;
+    }
+
+    public String getName() {
+        return name;
     }
 }

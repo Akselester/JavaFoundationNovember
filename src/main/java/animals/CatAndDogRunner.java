@@ -25,6 +25,5 @@ public class CatAndDogRunner {
         System.out.println(leva.toString());
         System.out.println("bobik:");
         System.out.println(bobik.toString());
-
     }
 }

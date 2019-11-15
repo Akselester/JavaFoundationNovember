@@ -2,14 +2,14 @@ package Shapes;
 
 public abstract class Shape {
 
+    static final double pi = 3.14;
+
     public static void main(String[] args) {
         Shape triangle = new Triangle(12, 10, 8);
         Shape circle = new Circle(15);
         System.out.println(triangle.getArea());
         System.out.println(circle.getArea());
     }
-
-    static final double pi = 3.14;
 
     public abstract double getArea();
 }

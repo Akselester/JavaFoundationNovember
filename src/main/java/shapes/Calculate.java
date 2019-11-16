@@ -1,10 +1,10 @@
-package Shapes;
+package shapes;
 
 public class Calculate {
-    public static double pi = 3.14;
+    public static final double pi = 3.14;
 
     public static double area(int diameter) {
-        return pi * ((diameter / 2d) * (diameter / 2d));
+        return pi * Math.pow((diameter / 2d), 2);
     }
 
     public static double area(int a, int b, int c) {

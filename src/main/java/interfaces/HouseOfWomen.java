@@ -19,7 +19,7 @@ public class HouseOfWomen {
 
     private static void print(Woman[] array) {
         for (Woman each : array) {
-            System.out.print(each);
+            System.out.print(each.getName() + " ");
         }
         System.out.print("\n");
     }

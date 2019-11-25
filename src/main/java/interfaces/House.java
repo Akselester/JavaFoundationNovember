@@ -3,12 +3,12 @@ package interfaces;
 public class House {
     public static void main(String[] args) {
         Cookable person1 = new Man();
-        Cookable person2 = new Woman();
+        Cookable person2 = new Woman("Jane Dow");
 
         person1.cook();
         person2.cook();
 
-        Washable washable1 = new Woman();
+        Washable washable1 = new Woman("Jane Dow jr.");
         Washable washable2 = new WashingMachine();
 
         washable1.wash();

@@ -16,6 +16,5 @@ public class ExceptionRunner {
         } finally {
             System.out.println("finally");
         }
-
     }
 }

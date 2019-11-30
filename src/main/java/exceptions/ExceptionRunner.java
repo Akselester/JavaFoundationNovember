@@ -13,6 +13,7 @@ public class ExceptionRunner {
         } catch (MyException e) {
             System.out.println("Ошибка возраста");
             e.printStackTrace();
+            e.fillInStackTrace();
         } finally {
             System.out.println("finally");
         }

@@ -1,6 +1,5 @@
 package strings;
 
-import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class RegularExpressions {
@@ -13,6 +12,6 @@ public class RegularExpressions {
     }
 
     private static boolean verify(String string) {
-        return Pattern.matches("[\\w\\s]*12[a-zA-Z]{1}[\\w\\s]*", string);
+        return Pattern.matches("[\\w\\s]*12[a-zA-Z]+[\\w\\s]*", string);
     }
 }

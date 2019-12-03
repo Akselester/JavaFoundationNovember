@@ -7,6 +7,10 @@ public class Man {
     public Man() {
     }
 
+    public int getAge() {
+        return age;
+    }
+
     public void setAge(int age) throws MyException {
 //        if (age < 0) throw new MyRuntimeException("Возраст " +
 //                "не может быть отрицательным");
@@ -18,10 +22,6 @@ public class Man {
             throw new MyException("Слишком большой возраст");
         }
         this.age = age;
-    }
-
-    public int getAge() {
-        return age;
     }
 
     public String getName() {

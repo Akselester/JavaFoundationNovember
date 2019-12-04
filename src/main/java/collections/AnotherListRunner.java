@@ -15,7 +15,7 @@ public class AnotherListRunner {
         Woman human3 = new Woman("Lisa");
         Woman human4 = new Woman("Bella");
 
-        List list = new ArrayList<Human>();
+        List<Human> list = new ArrayList<>();
         list.add(human1);
         list.add(human2);
         list.add(human3);
@@ -26,7 +26,7 @@ public class AnotherListRunner {
         printList(list);
     }
 
-    static void printList(List<Human> l) {
+    private static void printList(List<Human> l) {
         for (Human each : l) {
             System.out.println(each.getName());
         }

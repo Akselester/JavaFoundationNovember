@@ -3,7 +3,7 @@ package interfaces;
 public class Woman implements Comparable<Woman>, Cloneable, Cookable, Washable {
     private String name;
 
-    Woman(String name) {
+    public Woman(String name) {
         this.name = name;
     }
 

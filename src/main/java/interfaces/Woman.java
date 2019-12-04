@@ -1,6 +1,11 @@
 package interfaces;
 
-public class Woman implements Cookable, Washable {
+public class Woman implements Comparable<Woman>, Cloneable, Cookable, Washable {
+    private String name;
+
+    Woman(String name) {
+        this.name = name;
+    }
 
     @Override
     public void cook() {
@@ -15,5 +20,23 @@ public class Woman implements Cookable, Washable {
     @Override
     public void clean() {
         System.out.println("Clear!");
+    }
+
+    @Override
+    public int compareTo(Woman o) {
+        return this.getName().compareTo(o.getName());
+    }
+
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        return super.clone();
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }

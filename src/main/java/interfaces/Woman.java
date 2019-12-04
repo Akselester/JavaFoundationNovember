@@ -1,10 +1,9 @@
 package interfaces;
 
-public class Woman implements Comparable<Woman>, Cloneable, Cookable, Washable {
-    private String name;
+public class Woman extends Human implements Cloneable, Cookable, Washable {
 
     public Woman(String name) {
-        this.name = name;
+        super(name);
     }
 
     @Override
@@ -23,20 +22,8 @@ public class Woman implements Comparable<Woman>, Cloneable, Cookable, Washable {
     }
 
     @Override
-    public int compareTo(Woman o) {
-        return this.getName().compareTo(o.getName());
-    }
-
-    @Override
     protected Object clone() throws CloneNotSupportedException {
         return super.clone();
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 }

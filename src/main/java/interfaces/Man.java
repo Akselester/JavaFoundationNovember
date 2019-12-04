@@ -1,12 +1,13 @@
 package interfaces;
 
-public class Man implements Cookable, Cloneable, Comparable<Man> {
-    private String name;
+public class Man extends Human implements Cookable, Cloneable {
 
-    public Man(){}
+    public Man() {
+        super();
+    }
 
-    public Man(String name){
-        this.name = name;
+    public Man(String name) {
+        super(name);
     }
 
     public String getName() {
@@ -30,10 +31,5 @@ public class Man implements Cookable, Cloneable, Comparable<Man> {
     @Override
     protected Object clone() throws CloneNotSupportedException {
         return super.clone();
-    }
-
-    @Override
-    public int compareTo(Man o) {
-        return this.getName().compareTo(o.getName());
     }
 }

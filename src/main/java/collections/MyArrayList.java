@@ -74,7 +74,7 @@ public class MyArrayList<T> {
         }
         return false;
     }
-
+@SuppressWarnings({"Unchecked cast", "unchecked"})
     public T get(int index) {
         if ((index >= size) | (index < 0)) {
             throw new IndexOutOfBoundsException("Index " + index + " out of bounds for size " + size);

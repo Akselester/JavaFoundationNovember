@@ -27,8 +27,8 @@ public class AnotherListRunner {
     }
 
     private static void printList(List<Human> l) {
-        for (Human each : l) {
-            System.out.println(each.getName());
+        for (Human eachHuman : l) {
+            System.out.println(eachHuman.getName());
         }
     }
 }

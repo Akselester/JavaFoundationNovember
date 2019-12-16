@@ -1,5 +1,9 @@
 package interfaces;
 
+import equals.Programmer;
+
+import java.util.Objects;
+
 public class Man extends Human implements Cookable, Cloneable {
 
     public Man() {
@@ -31,5 +35,18 @@ public class Man extends Human implements Cookable, Cloneable {
     @Override
     protected Object clone() throws CloneNotSupportedException {
         return super.clone();
+    }
+
+    @Override
+    public boolean equals (Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Man that = (Man) o;
+        return name.equals(that.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name);
     }
 }

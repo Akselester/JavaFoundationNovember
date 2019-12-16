@@ -1,4 +1,4 @@
-package collections;
+package collections.myLinkedList;
 
 import interfaces.Man;
 

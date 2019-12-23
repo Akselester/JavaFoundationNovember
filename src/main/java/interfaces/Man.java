@@ -1,12 +1,17 @@
 package interfaces;
 
-public class Man implements Cookable, Cloneable, Comparable<Man> {
-    private String name;
+import equals.Programmer;
 
-    public Man(){}
+import java.util.Objects;
 
-    public Man(String name){
-        this.name = name;
+public class Man extends Human implements Cookable, Cloneable {
+
+    public Man() {
+        super();
+    }
+
+    public Man(String name) {
+        super(name);
     }
 
     public String getName() {
@@ -33,7 +38,15 @@ public class Man implements Cookable, Cloneable, Comparable<Man> {
     }
 
     @Override
-    public int compareTo(Man o) {
-        return this.getName().compareTo(o.getName());
+    public boolean equals (Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Man that = (Man) o;
+        return name.equals(that.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name);
     }
 }

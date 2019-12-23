@@ -103,14 +103,6 @@ public class MyLinkedList<T> {
     }
 
     public void clear() {
-        Node<T> nextNode;
-        for (Node<T> node = startNode; node != null;) {
-            nextNode = node.getNext();
-            node.setValue(null);
-            node.setNext(null);
-            node.setPrev(null);
-            node = nextNode;
-        }
         startNode = null;
         endNode = null;
         size = 0;
